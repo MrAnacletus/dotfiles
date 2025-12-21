@@ -16,3 +16,5 @@ Configuraciones unificadas con el tema Badwolf.
 Ejecuta `./scripts/installdots.sh` después de setear `export DEV_ENV=/ruta/a/dotfiles`.
 
 Para dry-run: `./scripts/installdots.sh --dry`.
+
+Ejemplo de uso `export DEV_ENV=/home/shinobu/repos/dotfiles && ./scripts/installdots.sh` 
