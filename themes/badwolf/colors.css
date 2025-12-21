@@ -1,12 +1,17 @@
+@define-color bg #1c1b1a;
+@define-color fg #f8f6f2;
+@define-color surface #35322d;
+@define-color primary #ff0044;
+@define-color secondary #fade3e;
+
 window {
-  background-color: #1c1b1a;
-  color: #f8f6f2;
-  border: 2px solid #ff0044;
+  background-color: @bg;
+  color: @fg;
+  border: 2px solid @primary;
   border-radius: 12px;
 }
 
 #entry:selected {
-  background-color: #35322d;
-  color: #fade3e;
+  background-color: @surface;
+  color: @secondary;
 }
-
