@@ -28,21 +28,27 @@ log() {
 log "env: $DEV_ENV"
 
 update_files() {
-    log "copying over files from: $1"
+    log "updating files from: $1"
     pushd $1 &> /dev/null
     (
         configs=`find . -mindepth 1 -maxdepth 1 -type d`
         for c in $configs; do
             directory=${2%/}/${c#./}
-            log "    removing: rm -rf $directory"
-
-            if [[ $dry_run == "0" ]]; then
-                rm -rf $directory
-            fi
-
-            log "    copying env: cp $c $2"
-            if [[ $dry_run == "0" ]]; then
-                cp -r ./$c $2
+            config_name=${c#./}
+            if [[ $config_name == "Code" ]]; then
+                log "    syncing (preserving): rsync -a $c/ $directory/"
+                if [[ $dry_run == "0" ]]; then
+                    rsync -a ./$c/ $directory/
+                fi
+            else
+                log "    removing: rm -rf $directory"
+                if [[ $dry_run == "0" ]]; then
+                    rm -rf $directory
+                fi
+                log "    copying: cp -r $c $2"
+                if [[ $dry_run == "0" ]]; then
+                    cp -r ./$c $2
+                fi
             fi
         done
 
