@@ -1,0 +1,26 @@
+* {
+    /* Backgrounds */
+    darker-background:      #1c1b1a;
+    background-primary:     #1c1b1a;
+    background-secondary:   #35322d;
+    background-tertiary:    #2a2723;
+    lighter-background:     #3f3b35;
+
+    /* Foregrounds */
+    foreground-primary:     #f8f6f2;
+    foreground-secondary:   rgba(248, 246, 242, 0.70);
+    foreground-tertiary:    rgba(248, 246, 242, 0.45);
+
+    /* Accent / highlights */
+    accent:                 #afd700;
+
+    /* Rofi core */
+    text-color:             @foreground-primary;
+    border-color:           rgba(255, 255, 255, 0.10);
+
+    /* Extra semantic colors (Badwolf-aligned) */
+    javacafe-blue:          #fade3e;  /* secondary */
+    green:                  #afd700;  /* accent */
+    magenta:                #ff0044;  /* primary */
+}
+

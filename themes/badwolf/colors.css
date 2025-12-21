@@ -1,0 +1,12 @@
+window {
+  background-color: #1c1b1a;
+  color: #f8f6f2;
+  border: 2px solid #ff0044;
+  border-radius: 12px;
+}
+
+#entry:selected {
+  background-color: #35322d;
+  color: #fade3e;
+}
+

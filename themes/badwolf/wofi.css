@@ -1,0 +1,43 @@
+/* =========================
+   Badwolf Dark – Hyprland
+   ========================= */
+
+@define-color bg #1c1b1a;
+@define-color fg #f8f6f2;
+@define-color surface #35322d;
+@define-color border rgba(255, 255, 255, 0.10);
+@define-color muted rgba(255, 255, 255, 0.40);
+
+@define-color primary #ff0044;
+@define-color secondary #fade3e;
+@define-color accent #afd700;
+
+/* extra palette */
+@define-color p1 #ff0044;
+@define-color p2 #fade3e;
+@define-color p3 #afd700;
+@define-color p4 #f8f6f2;
+@define-color p5 #1c1b1a;
+@define-color p6 #35322d;
+
+window {
+    background-color: @bg;
+    color: fg;
+    border: 1px solid @border;
+    border-radius: 12px;
+}
+
+#input {
+    background-color: @surface;
+    color: @fg;
+    border-radius: 6px;
+}
+
+#entry {
+    color: @fg;
+}
+
+#entry:selected {
+    background-color: @surface;
+    color: @secondary;
+}
