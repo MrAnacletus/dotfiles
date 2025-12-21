@@ -67,3 +67,4 @@ update_files $DEV_ENV/.local $HOME/.local
 copy $DEV_ENV/.zshrc $HOME/.zshrc
 
 hyprctl reload
+~/.config/hypr/monitor-setup.sh
