@@ -104,8 +104,8 @@
         "tooltip-format": "HDD - {used} used out of {total} on {path} ({percentage_used}%)",
         "states": {
             "warning": 85,
-            "critical": 90,
-        },
+            "critical": 90
+        }
     },
     "temperature": {
         "thermal-zone": 1,
@@ -113,7 +113,7 @@
         "format-alt-click": "click-right",
         "format-alt": " {temperatureC}°C",
         "critical-threshold": 70,
-        "format-critical": " {temperatureC}°C",
+        "format-critical": " {temperatureC}°C"
     },
     "battery": {
         "states": {
@@ -126,10 +126,6 @@
         "format-plugged": " {capacity}%",
         "format-alt-click": "click-right",
         "format-alt": "{icon} {capacity}%",
-        "states": {
-            "warning": 20,
-            "critical": 10
-        },
         "format-icons": [
             "󰂎",
             "󰁺",
@@ -193,7 +189,6 @@
         "on-scroll-down": "decbrightness"
     },
     "custom/weather": {
-        //shows the current weather and forecast
         "tooltip": true,
         "format": "{}",
         "interval": 3600,
@@ -213,7 +208,7 @@
         "format": "{ifname}",
         "format-wifi": " ",
         "format-ethernet": " ",
-        "format-disconnected": " ", //An empty format will hide the module.
+        "format-disconnected": " ",
         "tooltip-format": " {ifname} via {gwaddr}",
         "tooltip-format-wifi": " {essid} ({signalStrength}%)",
         "tooltip-format-ethernet": " {ifname} {ipaddr}/{cidr}",
@@ -241,5 +236,5 @@
         "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next",
         "format-en": "EN",
         "format-fa": "FA"
-    },
+    }
 }
