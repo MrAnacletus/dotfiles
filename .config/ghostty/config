@@ -1,0 +1,36 @@
+# --- Base ---
+background = #1c1b1a
+foreground = #f8f6f2
+cursor-color = #ff0044
+
+# --- ANSI palette ---
+palette = 0=#1c1b1a
+palette = 1=#ff0044
+palette = 2=#afd700
+palette = 3=#fade3e
+palette = 4=#5f87ff
+palette = 5=#ff5faf
+palette = 6=#5fd7d7
+palette = 7=#f8f6f2
+
+palette = 8=#35322d
+palette = 9=#ff3366
+palette = 10=#c4f000
+palette = 11=#fff26d
+palette = 12=#87afff
+palette = 13=#ff87c7
+palette = 14=#87ffff
+palette = 15=#ffffff
+
+# --- Font ---
+font-family = JetBrains Mono
+font-size = 12
+
+# --- Terminal ---
+term = xterm-256color
+shell-integration = zsh
+scrollback-limit = 10000
+
+# --- Keybindings ---
+keybind = ctrl+shift+c=copy_to_clipboard
+keybind = ctrl+shift+v=paste_from_clipboard
