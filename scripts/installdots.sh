@@ -109,8 +109,8 @@ update_files $DEV_ENV/.local $HOME/.local
 copy $DEV_ENV/.zshrc $HOME/.zshrc
 
 hyprctl reload
-if [[ -x $XDG_CONFIG_HOME/hypr/monitor-setup.sh ]]; then
-    $XDG_CONFIG_HOME/hypr/monitor-setup.sh
+if [[ -x $XDG_CONFIG_HOME/hypr/scripts/monitor-setup.sh ]]; then
+    $XDG_CONFIG_HOME/hypr/scripts/monitor-setup.sh
 else
-    log "monitor-setup.sh not found at $XDG_CONFIG_HOME/hypr/monitor-setup.sh"
+    log "monitor-setup.sh not found at $XDG_CONFIG_HOME/hypr/scripts/monitor-setup.sh"
 fi
