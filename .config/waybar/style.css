@@ -20,34 +20,37 @@
 */
 
 * {
-  font-family: "JetBrainsMono Nerd Font",
-               "Font Awesome 6 Free",
-               "Font Awesome 6 Brands",
-               "Noto Sans",
-               sans-serif;
-  font-size: 13px;
+    font-family:
+        "Symbols Nerd Font",
+        "JetBrains Mono",
+        "Font Awesome 6 Free",
+        "Font Awesome 6 Brands",
+        "Noto Sans",
+        sans-serif;
+    font-size: 13px;
 }
 
+
 /* Colors (dracula) */
-@define-color foreground	#f8f6f2;
-@define-color background	#1c1b1a;
-@define-color surface	#35322d;
-@define-color muted rgba(255,255,255,0.4);
+@define-color foreground #f8f6f2;
+@define-color background #1c1b1a;
+@define-color surface #35322d;
+@define-color muted rgba(255, 255, 255, 0.4);
 
 @define-color primary #ff0044;
 @define-color secondary #fade3e;
 @define-color accent #afd700;
 
-@define-color orange	#ffb86c;
-@define-color gray	#44475a;
+@define-color orange #ffb86c;
+@define-color gray #44475a;
 @define-color black #21222c;
-@define-color red	#ff5555;
-@define-color green	#50fa7b;
-@define-color yellow	#f1fa8c;
-@define-color cyan	#8be9fd;
-@define-color blue	#6272a4;
-@define-color purple	#bd93f9;
-@define-color pink	#ff79c6;
+@define-color red #ff5555;
+@define-color green #50fa7b;
+@define-color yellow #f1fa8c;
+@define-color cyan #8be9fd;
+@define-color blue #6272a4;
+@define-color purple #bd93f9;
+@define-color pink #ff79c6;
 @define-color white #ffffff;
 @define-color brred #ff6e6e;
 @define-color brgreen #69ff94;
@@ -59,16 +62,16 @@
 
 @define-color arch_blue #89b4fa;
 
-@define-color workspace_background	@background;
-@define-color workspace_button	@foreground;
-@define-color workspace_active	@black;
-@define-color workspace_active_background	@green;
-@define-color workspace_urgent	@white;
-@define-color workspace_urgent_background	@brred;
-@define-color workspace_hover	@black;
-@define-color workspace_hover_background	@pink;
-@define-color critical	@red;
-@define-color warning	@yellow;
+@define-color workspace_background @background;
+@define-color workspace_button @foreground;
+@define-color workspace_active @black;
+@define-color workspace_active_background @green;
+@define-color workspace_urgent @white;
+@define-color workspace_urgent_background @brred;
+@define-color workspace_hover @black;
+@define-color workspace_hover_background @pink;
+@define-color critical @red;
+@define-color warning @yellow;
 
 
 @keyframes blink {
@@ -100,7 +103,8 @@ window#waybar {
     border-radius: 5px;
 }
 
-#workspaces button, #workspaces button.persistent {
+#workspaces button,
+#workspaces button.persistent {
     background: transparent;
     color: @workspace_button;
     transition: none;
@@ -110,7 +114,7 @@ window#waybar {
     background: @primary;
     color: @bg;
     border-radius: 5px;
-/*
+    /*
     border-top: 2px solid @pink;
     border-bottom: 2px solid @pink;
 */
@@ -143,7 +147,7 @@ tooltip {
     border-color: @purple;
 }
 
-tooltip label{
+tooltip label {
     color: @grey;
 }
 
@@ -171,7 +175,7 @@ tooltip label{
 }
 
 #disk.critical,
-#temperature.critical  {
+#temperature.critical {
     background-color: @critical;
 }
 
@@ -218,7 +222,7 @@ tooltip label{
 }
 
 #clock {
-    color:@secondary;
+    color: @secondary;
     border-radius: 0px 5px 5px 0px;
 }
 
@@ -228,8 +232,6 @@ tooltip label{
     margin: 5px 50px 5px 10px;
 }
 
-#pulseaudio {
-}
+#pulseaudio {}
 
-#pulseaudio.microphone {
-}
+#pulseaudio.microphone {}
