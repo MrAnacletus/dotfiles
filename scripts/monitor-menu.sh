@@ -4,7 +4,7 @@ set -euo pipefail
 # Simple frontend to pick monitor mode via dmenu/wofi/rofi
 # Modes must match monitor-setup.sh options
 MODES=(dual primary secondary)
-SETUP_SCRIPT="$HOME/.config/hypr/scripts/monitor-setup.sh"
+SETUP_SCRIPT="$HOME/.local/bin/monitor-setup.sh"
 
 if [[ ! -x "$SETUP_SCRIPT" ]]; then
     echo "monitor-setup.sh not found or not executable: $SETUP_SCRIPT" >&2
@@ -37,12 +37,8 @@ current_mode() {
 
 # Pick menu command: prefer wofi, fallback rofi, then fzf
 menu_cmd() {
-    if command -v wofi >/dev/null 2>&1; then
-        echo "wofi --dmenu --prompt 'Monitor mode'"
-    elif command -v rofi >/dev/null 2>&1; then
-        echo "rofi -dmenu -p 'Monitor mode'"
-    elif command -v fzf >/dev/null 2>&1; then
-        echo "fzf --prompt='Monitor mode> '"
+    if command -v rofi >/dev/null 2>&1; then
+        echo "rofi -dmenu -p 'Monitor mode' -theme ~/.config/rofi/themes/appmnu.rasi"
     else
         echo "cat"  # last resort
     fi

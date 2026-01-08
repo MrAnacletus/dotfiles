@@ -1,83 +1,24 @@
-/* ===== Badwolf GTK4 override ===== */
-
-@define-color bg #0B0F10;
-@define-color bg-alt #131718;
-@define-color bg-soft #1C2325;
-
-@define-color fg #f8f8f2;
-@define-color fg-dim #a0a8a8;
+/* Badwolf minimal override over adw-gtk-theme */
 
 @define-color accent #8be9fd;
 @define-color accent-soft #6272a4;
 
-@define-color border #1f2426;
-
-/* Window */
-window,
-.background {
-    background-color: @bg;
-    color: @fg;
+/* Sidebar selection */
+.navigation-sidebar row:selected {
+  background-color: @accent-soft;
 }
 
-/* Headerbar */
-headerbar {
-    background-color: @bg-alt;
-    color: @fg;
-    border-bottom: 1px solid @border;
+.navigation-sidebar row:selected:focus {
+  background-color: @accent;
+  color: #0B0F10;
 }
 
-/* Sidebar */
-.navigation-sidebar,
-.sidebar {
-    background-color: @bg-alt;
-}
-
-.navigation-sidebar row:selected,
-.sidebar row:selected {
-    background-color: @bg-soft;
-}
-
-/* File view */
-.view {
-    background-color: @bg;
-    color: @fg;
-}
-
+/* File selection */
 .view:selected {
-    background-color: @bg-soft;
+  background-color: @accent-soft;
 }
 
-/* Buttons */
-button {
-    background-color: transparent;
-    color: @fg;
-}
-
-button:hover {
-    background-color: @bg-soft;
-}
-
-/* Entries / search */
-entry {
-    background-color: @bg-alt;
-    color: @fg;
-    border: 1px solid @border;
-}
-
-entry:focus {
-    border-color: @accent;
-}
-
-/* Scrollbar */
-scrollbar slider {
-    background-color: @bg-soft;
-}
-
-/* Pathbar */
-.path-bar button {
-    background-color: transparent;
-}
-
-.path-bar button:hover {
-    background-color: @bg-soft;
+.view:selected:focus {
+  background-color: @accent;
+  color: #0B0F10;
 }

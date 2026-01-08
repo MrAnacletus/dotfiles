@@ -207,8 +207,8 @@
     "network": {
         "format": "{ifname}",
         "format-wifi": " ",
-        "format-ethernet": " ",
-        "format-disconnected": " ",
+        "format-ethernet": "󰈀 {ipaddr}",
+        "format-disconnected": "󰖪 ",
         "tooltip-format": " {ifname} via {gwaddr}",
         "tooltip-format-wifi": " {essid} ({signalStrength}%)",
         "tooltip-format-ethernet": " {ifname} {ipaddr}/{cidr}",
@@ -235,6 +235,6 @@
         "format": "{}",
         "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next",
         "format-en": "EN",
-        "format-fa": "FA"
+        "format-fa": "ES"
     }
 }

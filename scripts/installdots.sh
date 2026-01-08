@@ -108,9 +108,17 @@ update_files $DEV_ENV/.local $HOME/.local
 
 copy $DEV_ENV/.zshrc $HOME/.zshrc
 
+mkdir -p ~/.local/bin
+cp $DEV_ENV/scripts/hyprland-audio-switch.py ~/.local/bin/
+cp $DEV_ENV/scripts/monitor-menu.sh ~/.local/bin/
+cp $DEV_ENV/scripts/monitor-setup.sh ~/.local/bin/
+chmod +x ~/.local/bin/hyprland-audio-switch.py
+chmod +x ~/.local/bin/monitor-menu.sh
+chmod +x ~/.local/bin/monitor-setup.sh
+
 hyprctl reload
-if [[ -x $XDG_CONFIG_HOME/hypr/scripts/monitor-setup.sh ]]; then
-    $XDG_CONFIG_HOME/hypr/scripts/monitor-setup.sh
+if [[ -x $HOME/.local/bin/monitor-setup.sh ]]; then
+    $HOME/.local/bin/monitor-setup.sh
 else
-    log "monitor-setup.sh not found at $XDG_CONFIG_HOME/hypr/scripts/monitor-setup.sh"
+    log "monitor-setup.sh not found at $HOME/.local/bin/monitor-setup.sh"
 fi
