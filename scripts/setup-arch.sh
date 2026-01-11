@@ -20,7 +20,8 @@ echo "▶ Iniciando setup de Arch..."
 echo "▶ Instalando paquetes base..."
 
 pacman -S --needed --noconfirm \
-  base-devel\
+  base-devel \
+  fzf \
   git \
   firefox \
   jq \
