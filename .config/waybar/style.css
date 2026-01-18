@@ -91,7 +91,7 @@
 }
 
 window#waybar {
-    background: @bgt;
+    background: @background;
     color: @foreground;
 }
 
@@ -112,7 +112,7 @@ window#waybar {
 
 #workspaces button.active {
     background: @primary;
-    color: @bg;
+    color: @black;
     border-radius: 5px;
     /*
     border-top: 2px solid @pink;
@@ -148,7 +148,7 @@ tooltip {
 }
 
 tooltip label {
-    color: @grey;
+    color: @gray;
 }
 
 #custom-rofi,
