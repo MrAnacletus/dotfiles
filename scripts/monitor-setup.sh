@@ -8,6 +8,9 @@ RETRY_DELAY=0.5
 PRIMARY="ViewSonic Corporation VX2728-QHD X2F241580010"
 SECONDARY="ViewSonic Corporation XG2405 W9Q210302159"
 
+# Track monitors we've already disabled to avoid duplicate actions/logs
+declare -A DISABLED_MONITORS=()
+
 if [[ "$MODE" == "--help" || "$MODE" == "-h" ]]; then
     echo "Uso: $0 [dual|primary|secondary]"
     exit 0
@@ -65,6 +68,7 @@ disable_monitor_if_present() {
         if [[ "$m" == "$desc" ]]; then
             execute_with_retry "hyprctl keyword monitor \"desc:$desc,disable\""
             echo "⏻ $desc desactivado"
+            DISABLED_MONITORS["$desc"]=1
             return 0
         fi
     done
@@ -107,8 +111,13 @@ mapfile -t POST_ACTIVE < <(
 
 for m in "${POST_ACTIVE[@]}"; do
     if ! is_target "$m" "${TARGET_MONITORS[@]}"; then
+        # Skip if we already disabled this monitor earlier
+        if [[ -n "${DISABLED_MONITORS[$m]:-}" ]]; then
+            continue
+        fi
         execute_with_retry "hyprctl keyword monitor \"desc:$m,disable\""
         echo "⏻ $m desactivado"
+        DISABLED_MONITORS["$m"]=1
     fi
 done
 

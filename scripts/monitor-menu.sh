@@ -35,7 +35,6 @@ current_mode() {
     fi
 }
 
-# Pick menu command: prefer wofi, fallback rofi, then fzf
 menu_cmd() {
     if command -v rofi >/dev/null 2>&1; then
         echo "rofi -dmenu -p 'Monitor mode' -theme ~/.config/rofi/themes/appmnu.rasi"

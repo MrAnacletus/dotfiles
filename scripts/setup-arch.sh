@@ -8,8 +8,8 @@ set -e
 
 # ---- Sudo keep-alive ----
 if [[ $EUID -ne 0 ]]; then
-  echo "Este script debe ejecutarse con sudo"
-  exit 1
+    echo "Este script debe ejecutarse con sudo"
+    exit 1
 fi
 
 echo "▶ Iniciando setup de Arch..."
@@ -20,28 +20,30 @@ echo "▶ Iniciando setup de Arch..."
 echo "▶ Instalando paquetes base..."
 
 pacman -S --needed --noconfirm \
-  base-devel \
-  fzf \
-  git \
-  firefox \
-  jq \
-  nautilus \
-  gvfs \
-  gvfs-mtp \
-  waybar \
-  papirus-icon-theme \
-  mako \
-  rofi \
-  code \
-  adw-gtk-theme \
-  unzip \
-  pipewire \
-  pipewire-pulse \
-  wireplumber \
-  libnotify \
-  pavucontrol \
-  python \
-  hyprshot
+    base-devel \
+    fzf \
+    git \
+    firefox \
+    jq \
+    nautilus \
+    gvfs \
+    gvfs-mtp \
+    waybar \
+    papirus-icon-theme \
+    mako \
+    rofi \
+    code \
+    adw-gtk-theme \
+    unzip \
+    pipewire \
+    pipewire-pulse \
+    wireplumber \
+    libnotify \
+    pavucontrol \
+    python \
+    hyprshot \
+    nvim \
+    python-pynvim
 
 # -------------------------------------
 # 2. Fuentes
@@ -49,13 +51,13 @@ pacman -S --needed --noconfirm \
 echo "▶ Instalando fuentes..."
 
 pacman -S --needed --noconfirm \
-  ttf-dejavu \
-  ttf-liberation \
-  noto-fonts \
-  noto-fonts-emoji \
-  ttf-fira-code \
-  ttf-jetbrains-mono \
-  ttf-jetbrains-mono-nerd
+    ttf-dejavu \
+    ttf-liberation \
+    noto-fonts \
+    noto-fonts-emoji \
+    ttf-fira-code \
+    ttf-jetbrains-mono \
+    ttf-jetbrains-mono-nerd
 
 # -------------------------------------
 # 3. Nerd Fonts Symbols (manual)
@@ -65,12 +67,12 @@ echo "▶ Instalando Nerd Fonts Symbols..."
 command -v curl >/dev/null || pacman -S --needed --noconfirm curl
 SYMBOLS_DIR="/usr/local/share/fonts/NerdFontsSymbolsOnly"
 if [[ ! -d "$SYMBOLS_DIR" ]]; then
-  mkdir -p "$SYMBOLS_DIR"
-  curl -L \
-    https://github.com/ryanoasis/nerd-fonts/releases/latest/download/NerdFontsSymbolsOnly.zip \
-    -o /tmp/NerdFontsSymbolsOnly.zip
-  unzip -o /tmp/NerdFontsSymbolsOnly.zip -d "$SYMBOLS_DIR"
-  rm /tmp/NerdFontsSymbolsOnly.zip
+    mkdir -p "$SYMBOLS_DIR"
+    curl -L \
+        https://github.com/ryanoasis/nerd-fonts/releases/latest/download/NerdFontsSymbolsOnly.zip \
+        -o /tmp/NerdFontsSymbolsOnly.zip
+    unzip -o /tmp/NerdFontsSymbolsOnly.zip -d "$SYMBOLS_DIR"
+    rm /tmp/NerdFontsSymbolsOnly.zip
 fi
 
 # -------------------------------------

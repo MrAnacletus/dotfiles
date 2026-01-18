@@ -4,7 +4,7 @@ import re
 
 # --- CONFIGURATION ---
 
-SKIP_SINK_NAMES = ["AD104 High Definition Audio Controller Estéreo digital (HDMI)"]  # List of devices to skip, leave empty for no filtering
+SKIP_SINK_NAMES = ["Navi 48 HDMI/DP Audio Controller Estéreo digital (HDMI)"] # List of devices to skip, leave empty for no filtering
 ENABLE_NOTIFICATIONS = True  # Set to False to disable notifications
 
 # ---

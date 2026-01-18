@@ -235,6 +235,6 @@
         "format": "{}",
         "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next",
         "format-en": "EN",
-        "format-fa": "ES"
+        "format-es": "ES"
     }
 }
